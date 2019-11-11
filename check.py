@@ -116,7 +116,7 @@ def replace_copies(path):
                 for file in similar_files[1:]:
                     os.remove(file)
                     os.link(similar_files[0], file)
-                    print(f"File {file} was replaced by a harlink")
+                    print(f"File {file} was replaced by a harlink to {similar_files[0]}")
     else:
         print("There are no identical files")
 
