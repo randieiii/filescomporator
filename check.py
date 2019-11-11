@@ -93,13 +93,13 @@ class DirectoryInspection:
         inspected = self.get_similar_files(files_with_hash)
         return inspected
 
-def get_copies(path):
+def replace_copies(path):
     """
-    Function to get similar files in directory.
+    Function to get similar files in directory and replace them.
     :param path: target directory.
     :type path:str.
     :return: None.
-    >>> get_copies('.')
+    >>> replace_copies('.')
     In directory .
     There are no identical files
     """
@@ -125,4 +125,4 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Find similar files')
     parser.add_argument('directory', type=str, help='target directory')
     args = parser.parse_args()
-    get_copies(args.directory)
+    replace_copies(args.directory)
